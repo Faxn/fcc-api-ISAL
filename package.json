@@ -1,0 +1,24 @@
+{
+  "name": "fcc-api-ISAL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Faxn/fcc-api-ISAL.git"
+  },
+  "author": "Blake Curry",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Faxn/fcc-api-ISAL/issues"
+  },
+  "homepage": "https://github.com/Faxn/fcc-api-ISAL#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6",
+    "request": "^2.81.0"
+  }
+}
