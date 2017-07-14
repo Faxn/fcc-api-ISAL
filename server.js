@@ -12,11 +12,11 @@ const service_url = process.env.SERVICE_URL
 const BING_KEY = process.env.BING_KEY;
 
 
-app.get('/', function(req, res, next){
+app.get(['/', '/api', '/api/imagesearch'], function(req, res, next){
     res.render('help', {url:service_url});
 })
 
-
+//TODO: persist this somewhere?
 var queries = []
 
 
@@ -24,7 +24,6 @@ var queries = []
  * do an image search and pass the results on.
  */
 app.get('/api/imagesearch/:terms', function(req, res, next){
-    //https://api.cognitive.microsoft.com/bing/v5.0/images/search
     var options = {
           url:"https://api.cognitive.microsoft.com/bing/v5.0/images/search",
           qs : {q:req.params.terms.replace(/ /g, "+")},

@@ -1,0 +1,39 @@
+style.
+    .code {
+        background-color: lightgrey;
+        color: darkred;
+        font-family: monospace;
+    }
+
+
+
+h1 Image Search Abstraction Layer
+
+p 
+    Wrapper for an image search service.
+
+
+h2 API Endpoints
+h3 /api/imagesearch/:terms
+p.
+    Search for images related to terms 
+    <code>:terms</code>
+    is a space seperated list of keywords. The paramater 
+    span.code ?offset=N
+    | can be used to get more results.
+
+h3 /api/latest/imagesearch
+    Shows the last 10 searches. (or less if there haven't been 10 searches since the server restarted.)
+
+h2 Example API Calls
+
+p pictures about cat and fish.(mostly catfish)
+a(href="/api/imagesearch/Cat fish")= url + '/api/imagesearch/Cat fish'
+
+p 10th page of pictures related to dog.
+a(href="/api/imagesearch/dog?offset=10")= url + '/api/imagesearch/dog?offset=10'
+
+p see the last 10 searches through this api by anyone.
+a(href="/api/latest/imagesearch/")= url + '/api/latest/imagesearch/'
+
+
